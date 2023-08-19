@@ -154,6 +154,7 @@ export default function Home() {
                   <SelectItem value="md" text="Markdown" />
                 </Select>
 
+                {/* Take a look: https://tiptap.dev/editor */}
                 <div className="flex items-center gap-1">
                   <button
                     type="button"

@@ -1,5 +1,6 @@
 'use client'
 import { ComponentProps } from 'react'
+import { useAutoAnimate } from '@formkit/auto-animate/react'
 
 import { useFileInput } from './Root'
 import { Trash2, UploadCloud } from 'lucide-react'
@@ -9,13 +10,10 @@ export type FileListProps = ComponentProps<'div'>
 
 export function FileList(props: FileListProps) {
   const { files } = useFileInput()
-
-  if (files.length <= 0) {
-    return null
-  }
+  const [parent] = useAutoAnimate()
 
   return (
-    <div className="mt-4 space-y-3" {...props}>
+    <div ref={parent} className="mt-4 space-y-3" {...props}>
       {files.map((file, index) => (
         <div
           key={index}
