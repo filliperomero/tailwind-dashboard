@@ -8,13 +8,18 @@ import { SelectItem } from '@/components/Form/Select/SelectItem'
 import { countries } from '@/utils/countries'
 import { Textarea } from '@/components/Form/Textarea'
 import { Button } from '@/components/Button'
+import { ThemeSwitcher } from '@/components/ThemeSwitcher'
 
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">
-        Settings
-      </h1>
+      <div className="relative flex justify-between">
+        <h1 className="text-3xl font-medium text-zinc-900 dark:text-zinc-100">
+          Settings
+        </h1>
+
+        <ThemeSwitcher />
+      </div>
 
       <SettingsTabs />
 
